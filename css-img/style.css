@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.barraCinza {
+    background-color: gray;
+    height: 75px; /* Altura da barra */
+    width: 100%; /* Largura total */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.hrS {
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+hr {
+    width: 40px; /* Largura total */
+    height: 7px; /* Altura da barra */
+    background-color: white;
+    border: 0px;
+    border-radius: 25px;
+}
+
+#barraDePesquisa {
+    border-radius: 25px;
+    border: 0px;
+    height: 25px; /* Altura da barra */
+    width: 500px; /* Largura total */
+    padding-left: 12px;
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+::placeholder {
+    color: black;
+}
+
+#barraDePesquisa:hover {
+    scale: 1.05;
+    background-color: rgb(255, 255, 255);
+}
+
+#barraDePesquisa:active {
+    transform: scale(0.9);
+    background-color: #FBC638;
+}
+
+.opcoesDaBarra {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    position: absolute;
+    right: 15px;
+}
+
+
+
+
+
+/* BOTÃO DO TEMA */
+#botaoTema {
+    position: absolute;
+    right: 155px;
+}
+
+#checkbox {
+    -webkit-nimation: none;
+    visibility: hidden;
+    display: none;
+}
+
+.check {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+#checkbox:checked ~.check {
+    background-color: white;
+}
+
+.check::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+#checkbox:checked ~ .check::before {
+    transform: translateX(-50px);
+}
+
+.check::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: black;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+
+#checkbox:checked ~ .check::after {
+    transform: translateX(0px);
+    background-color: #FBC638;
+}
+/* FIM BOTÃO DO TEMA */
+
+
+
+
+
+.barraPreta {
+    background-color: black;
+    height: 50px; /* Altura da barra */
+    width: 100%; /* Largura total */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    padding-left: 10px;
+}
+
+.opcoesDaBarraPreta {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 19px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.opcoesDaBarraPreta:hover {
+    background-color: black;
+    color: #FBC638;
+}
+
+.opcoesDaBarraPreta2 {
+    color: #FBC638;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 19px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.opcoesDaBarraPreta:hover {
+    background-color: black;
+    color: #FBC638;
+}
+
+/*Btn Yellow*/
+.neon-yellow {
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    color:#FBC638;
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 65px;
+    border-radius:50px;
+    position: absolute;
+    right: 0;
+}
+
+.neon-yellow:hover{
+    background: #FBC638;
+    color: #000;
+    box-shadow: 0 0 10px #FBC638, 0 0 40px #FBC638, 0 0 70px #FBC638;
+}
+
+.neon-yellow:active{
+    color:#FBC638; 
+    background: #000000;
+}
+
+#home {
+    position: absolute;
+    right: 18px;
+    top: 80px;
+}
+
+#home:hover {
+    scale: 1.05;
+}
+
+#home:active {
+    transform: scale(1.3);
+}
+
+
+
+
+
+/* BOTÃO DA ASSINATURA (ÍNICIO) */
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative; /* Adicionado para permitir o posicionamento relativo dos elementos filhos */
+}
+  
+.cta {
+    display: flex;
+    align-items: center; /* Adicionado para centralizar verticalmente as setas */
+    padding: 1px 12px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+    background: #6225E6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    height: 30px; /* Altura da barra */
+    width: 210px; /* Largura total */
+    position: relative; /* Para que as setas fiquem dentro */
+}
+  
+.cta:focus {
+    outline: none; 
+}
+  
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+    transform: skewX(-15deg) translateY(-5px); /* Ajuste para mover a forma amarela menos para baixo */
+}
+
+.cta .span {
+    transform: skewX(15deg);
+    position: relative; /* Para que as setas fiquem dentro da forma roxa */
+    z-index: 1; /* As setas ficam acima da forma roxa */
+} 
+
+.cta .span:nth-child(2) {
+    width: 20px;
+    position: relative;
+    right: 5px; /* Diminui a margem para manter as setas dentro */
+    transform: translateY(3px); /* Ajuste para mover a seta para baixo */
+}
+
+.cta:hover .span {
+    margin-left: 5px; /* Ajuste para que as setas não saiam da forma roxa ao passar o mouse */
+}
+  
+.cta:hover  .span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+  
+.span {
+    transform: skewX(15deg) 
+}
+  
+.span:nth-child(2) {
+    width: 20px;
+    margin-left: 10px; /* Diminui a margem para manter as setas dentro */
+    position: relative;
+    top: 0; /* Ajustado para centralizar verticalmente */
+}
+    
+/**************SVG****************/
+  
+path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+  
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+  
+.cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+  
+.cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+  
+.cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+  
+/* SVG animations */
+  
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #FBC638;
+    }
+    100% {
+        fill: white;
+    }
+}
+/* BOTÃO DA ASSINATURA (FIM) */
+
+
+
+
+
+.popularesTexto {
+    background-color: black;
+    color: #FBC638;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 8px;
+    margin-left: 0px;
+}
+
+.triangulo {
+	width: 0; 
+  	height: 0; 
+	border-top: 15px solid black;
+  	border-left: 15px solid transparent;
+  	border-right: 15px solid transparent;
+    margin-left: 55px;
+}
+
+.populares {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.listaDeMangas {
+    width: 1179px;
+    margin: 0 auto;
+}
+
+.manga {
+    margin-left: 15px;
+}
+
+.manga:hover {
+    scale: 1.05;
+}
+
+.manga:active {
+    transform: scale(0.9);
+}
+
+
+
+
+/* BANNER */
+.slider {
+    margin: 0 auto;
+    width: 1120px;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 75px;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+    width: 1120px;
+    height: 400px;
+}
+
+.slide img {
+    width: 1120px;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 1120px;
+    top: 440px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid goldenrod;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: goldenrod;
+    scale: 1.7;
+}
+
+.manual-btn:active {
+    transform: scale(5);
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -100%;
+}
+
+.navigation-auto div {
+    border: 2px solid goldenrod;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 1120px;
+    top: 440px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: goldenrod;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: goldenrod;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: goldenrod;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: goldenrod;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background-color: goldenrod;
+}
+
+
+
+
+
+/* PÁGINA DO BLOG */
+.container {
+    display: flex; /* Usando flexbox para layout em linha */
+}
+
+.popularesTexto2 {
+    background-color: black;
+    color: #FBC638;
+    text-decoration: none;
+    font-size: 50px;
+    border-radius: 25px;
+    padding: 8px;
+}
+
+.triangulo2 {
+	width: 0; 
+  	height: 0; 
+	border-top: 35px solid black;
+  	border-left: 35px solid transparent;
+  	border-right: 35px solid transparent;
+    margin-left: 55px;
+}
+
+.populares2 {
+    margin-top: 75px;
+    margin-left: 5%;
+    margin-right: 150px;
+}
+
+#quemSomosDesc {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    padding: 0px 25px;
+    width: 750px;
+    height: 674px;
+    margin-top: 243px;
+    position: absolute;
+    right: 5%;
+}
+
+
+
+
+
+/* BANNER 2 */
+.slider2 {
+    margin: 0 auto;
+    width: 566px;
+    height: 674px;
+    overflow: hidden;
+    margin-top: 75px;
+}
+
+.slides2 {
+    width: 400%;
+    height: 674px;
+    display: flex;
+}
+
+.slides2 input {
+    display: none;
+}
+
+.slide2 {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+    width: 566px;
+    height: 674px;
+}
+
+.slide2 img {
+    width: 566px;
+}
+
+.manual-navigation2 {
+    position: absolute;
+    width: 566px;
+    top: 440px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn2 {
+    border: 2px solid goldenrod;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn2:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn2:hover {
+    background-color: goldenrod;
+    scale: 1.7;
+}
+
+.manual-btn2:active {
+    transform: scale(5);
+}
+
+#radio12:checked ~ .first2 {
+    margin-left: 0;
+}
+
+#radio22:checked ~ .first2 {
+    margin-left: -25%;
+}
+
+#radio32:checked ~ .first2 {
+    margin-left: -50%;
+}
+
+#radio42:checked ~ .first2 {
+    margin-left: -75%;
+}
+
+#radio52:checked ~ .first2 {
+    margin-left: -100%;
+}
+
+.navigation-auto2 div {
+    border: 2px solid goldenrod;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto2 {
+    position: absolute;
+    width: 566px;
+    top: 440px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto2 div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio12:checked ~ .navigation-auto2 .auto-btn12 {
+    background-color: goldenrod;
+}
+
+#radio22:checked ~ .navigation-auto2 .auto-btn22 {
+    background-color: goldenrod;
+}
+
+#radio32:checked ~ .navigation-auto2 .auto-btn32 {
+    background-color: goldenrod;
+}
+
+#radio42:checked ~ .navigation-auto2 .auto-btn42 {
+    background-color: goldenrod;
+}
+
+#radio52:checked ~ .navigation-auto2 .auto-btn52 {
+    background-color: goldenrod;
+}
+
+
+
+
+
+
+/* RODAPÉ */
+.contatos {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.rodape {
+    background-color: gray;
+    padding-top: 5px;
+    margin-top: 100px;
+}
+
+.metodosDePagamento {
+    position: absolute;
+    right: 0px;
+    margin-top: -80px;
+}
+
+.termos {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 0 5px 0;
+}
+
+
+
+
+
+/* PÁGINA PRODUTOS */
+.listaDeMangas2 {
+    width: 1391px;
+    margin: 0 auto;
+}
+
+.populares3 {
+    margin-top: 100px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
